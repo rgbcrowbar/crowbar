@@ -1,0 +1,29 @@
+{
+  "id": "bc-template-bios",
+  "description": "manages bios configuration for Dell PEC hardware",
+  "attributes": {
+    "bios": {
+	  "bios_setup_enable" : true,
+	  "bios_update_enable": true,
+	  "debug": true
+	 }
+  },
+  "deployment": {
+    "bios": {
+      "crowbar-revision": 0,
+      "elements": {},
+      "element_order": [
+        [ "bios-install", "bios-update"  ]
+      ],
+      "config": {
+        "environment": "bios-base-config",
+        "mode": "full",
+        "transitions": true,
+        "transition_list": [
+          "discovered"
+	]
+      } 
+    }
+  }
+}
+

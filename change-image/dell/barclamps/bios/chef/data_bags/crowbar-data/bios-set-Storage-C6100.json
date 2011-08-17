@@ -1,0 +1,5 @@
+  {  "id": "bios-set-Storage-C6100",
+     "attributes": { 
+        "QPI Bandwidth Priority" : ["4855h", "Intel QPI Bandwidth Priority_ Configured the priority of requests on the QPI bus for IO traffic_"]        
+     }
+  }    

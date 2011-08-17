@@ -1,0 +1,7 @@
+  {  "id": "bios-set-Virtualization-PowerEdgeC6105",
+     "attributes": { 
+        "Secure Virtual Machine Mode" : ["4855", "Enable Secure Virtual Machine Mode"] ,       
+        "SR_IOV" : ["4805", "Enable Single Root I_O Virtualization_"] ,       
+        "IOMMU" : ["48B8", "Enabled IOMMU"]        
+     }
+  }    

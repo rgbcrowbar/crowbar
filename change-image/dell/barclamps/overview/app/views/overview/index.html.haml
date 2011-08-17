@@ -1,0 +1,73 @@
+%h1 Overview
+
+#overview
+  #api_clients.dark_green.off
+    %h2= t '.api_clients'
+  %section#bridge
+    .column_33.first
+      #nova_api.pink.off
+        = t '.nova_api'
+        .ip 
+    .column_33
+      #glance_api.pink.off
+        = t '.glance_api'
+        .ip 
+    .column_33.last
+      #swift_api.pink.off
+        = t '.swift_api'
+        .ip 
+  #ops_infrastructure.orange.off
+    %h2= t '.ops_infrastructure'
+    #ops_management.green.off
+      %h3= t '.ops_mgmt'
+      #metering.green.off= t '.metering'
+      #performance.green.off= t '.performance'
+      #monitoring.green.off= t '.monitoring'
+      #crowbar.green.off= t '.crowbar'
+    .right
+      .column_33.first
+        #nova.green.off= t '.nova'
+      .column_33
+        #glance.green.off= t '.glance'
+      .column_33.last
+        #swift.green.off= t '.swift'
+      .column_100
+        #os.green.off= t '.os'
+      .column_50.first
+        #hardware.blue.off= t '.hardware'
+      .column_50.last
+        #network.blue.off= t '.network'
+    .clear
+
+:javascript
+  function update() {
+    $.getJSON('#{overview_path}.json', function(data) {
+      $.each(data, function(key,val) {
+        if(val > 0) {
+          $('#'+key).removeClass('off').trigger('cssClassChanged');
+        } else {
+          $('#'+key).addClass('off').trigger('cssClassChanged');
+        }
+      });
+      $.each(data['api_ips'], function(key, val) {
+        $('#'+key).attr('title',val);
+      });
+      $.each(data['api_names'], function(key, val) {
+        $('#'+key+' .ip').text(val);
+      });
+    });
+  }
+  
+  jQuery(document).ready(function($) {
+  
+    $('#api_clients, #ops_management, #ops_infrastructure').live('cssClassChanged', function() {
+      if($(this).children('.off').length < 1) {
+        $(this).removeClass('off')
+      } else {
+        $(this).addClass('on')
+      }
+    })
+    
+    update();
+    
+  });

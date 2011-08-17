@@ -1,0 +1,10 @@
+{ 
+  "type" : "map", "required": true, "mapping":  {  
+     "id" : { "type": "str", "required": true } ,  
+     "attributes" : { "type": "map", "required": true, "mapping":  {
+    	 = : { "type" : "seq", "required": true, "sequence": [{ "type" : "str"  }]                 
+	     }
+       }
+     }     
+   }
+} 

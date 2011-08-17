@@ -1,0 +1,13 @@
+
+%p
+  = render :partial => "barclamp/node_selector"
+
+:javascript
+  $(document).ready(function(){
+    var constraints = { 
+      "bios-install": { "unique": false, "count": -1 },
+      "bios-update": { "unique": false, "count": -1 }
+    };
+    node_selector($('#drag_drop'), constraints)
+  });
+

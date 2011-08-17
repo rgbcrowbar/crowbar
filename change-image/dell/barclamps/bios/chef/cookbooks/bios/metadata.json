@@ -1,0 +1,41 @@
+{
+  "groupings": {
+
+  },
+  "platforms": {
+
+  },
+  "recommendations": {
+
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "description": "Update and configure BIOS ",
+  "version": "0.1.1",
+  "providing": {
+
+  },
+  "attributes": {
+
+  },
+  "maintainer": "Dell, Inc.",
+  "long_description": "Update and configure BIOS ",
+  "name": "bios",
+  "recipes": {
+
+  },
+  "replacing": {
+
+  },
+  "dependencies": {
+    "utils": [
+
+    ]
+  },
+  "maintainer_email": "crowbar@dell.com"
+}

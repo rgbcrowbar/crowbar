@@ -1,0 +1,5 @@
+  {  "id": "bios-set-Storage-PowerEdgeC2100",
+     "attributes": { 
+        "QPI Bandwidth Priority" : ["484B", "Set Intel QPI Randwidth Priority _RTID_ to IO _ 32_16_40"]        
+     }
+  }    
