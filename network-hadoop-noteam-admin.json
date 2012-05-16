@@ -4,7 +4,7 @@
   "attributes": {
     "network": {
       "start_up_delay": 30,
-      "mode": "team",
+      "mode": "single",
       "teaming": {
         "mode": 6
       },
