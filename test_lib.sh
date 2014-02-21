@@ -870,7 +870,7 @@ EOF
 # $1 = the hostname of the node to deregister.
 deregister_slave() {
     # make Chef forget about the node.
-    crowbar machines delete "$1"
+    barclamps/crowbar/bin/crowbar machines delete "$1"
 }
 
 # Create infrastructure for our slave nodes, but do not start them.
