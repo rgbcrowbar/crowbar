@@ -178,7 +178,7 @@ echo "$(date '+%F %T %z'): Arranging for gems to be installed"
 
     GEMS=(
         # rails stuff
-        rails-2.3.17
+        rails-2.3.18
         rake-0.8.7
         rack-1.1.6
 

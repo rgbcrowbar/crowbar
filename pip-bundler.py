@@ -76,6 +76,8 @@ class Bundler:
         self.update = update
         for require in requires:
             try:
+                if require.startswith('#'):
+                    continue
                 package = self.finder.find_requirement(InstallRequirement.from_line(require, None), False)
                 if not self._is_cached(package.filename):
                     if self.update:
